@@ -1,0 +1,104 @@
+
+*{
+	margin:0;
+	padding:0;
+}
+$color-arr:skyblue,pink,yellow,red,blue,#ff6700,#ff6666,#333;
+.root{
+	position: relative;
+.swiper-container{
+    width: 50vh;
+    height: 70vh;
+	font-size: 100px;
+	position:relative;
+	.swiper-wrapper{
+	@for $i from 1 through 8{
+	.swiper-slide:nth-child(#{$i}){
+		background: nth($color-arr,$i);
+			}
+		}
+	}
+	.background-1{
+		 width: 312px;
+		height: 501px;
+		background: pink;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		animation: s1box1ani 0.5s linear 0s 1 forwards;
+		@keyframes s1box1ani{
+		  0%{
+		   opacity: 1;
+		    transform: rotate(120deg);
+		  }
+		  100%{
+		    transform: rotate(0);
+		    opacity: 1;
+		  }
+	}
+	}
+	.background-2{
+		  position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: 271px;
+		height: 438px;
+		background: blue;
+		animation: s2box1ani 0.5s linear 0s 1 forwards;
+		@keyframes s2box1ani{
+		  0%{
+		   opacity: 1;
+		    transform: rotate(-120deg);
+		  }
+		  100%{
+		    transform: rotate(0);
+		    opacity: 1;
+		  }
+		  }
+	} 
+	.background-3{
+		  width: 249px;
+		height: 414px;
+		background: #000;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		// background:url(../../img/border-1.png) no-repeat center/100% auto;
+	}
+}  
+.jiantou{
+	width:40px;
+	height:25px;
+	position: absolute;
+	left:0;
+	right: 0;
+	margin: 0 auto;
+	bottom:20 px;
+	z-index: 999;
+	font-size: 40px;
+	color: #fff;
+	animation:jtmove 1.5s ease 0s infinite;
+	-webkit-animation:jtmove 1.5s infinite;
+	  @keyframes jtmove{
+		0%{
+	      bottom:20px;
+	      opacity: 1;
+			}
+		100%{
+	      bottom:60px;
+	      opacity: 0;
+	    }
+	
+	  }
+	};
+
+}

@@ -1,0 +1,25 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+*{
+	margin:0;
+	padding:0;
+}
+$color-arr:skyblue,pink,yellow,red,blue,#ff6700,#ff6666,#333;
+.swiper-container {
+    width: 50vh;
+    height: 90vh;
+	font-size: 100px;
+	.swiper-wrapper{
+	@for $i from 1 through 8{
+	.swiper-slide:nth-child(#{$i}){
+		background: nth($color-arr,$i);
+			}
+		}
+	}
+}  
+
+
+
